@@ -12,15 +12,7 @@ export class HackerNewsComponent {
   news = {hits:[]};
   constructor(private HackerNewsService: HackerNewsService) {
 
-    this.HackerNewsService.getNews().subscribe(
-      function(data){
-        console.log("data",data);
-        this.news = data;
-      }
-    );
+    this.HackerNewsService.getNews().subscribe(data => this.news = data);
   }
-
-   getLatestNews() {
-      this.HackerNewsService.getNews().subscribe(data => this.news = data);
-    }
+  
 }
