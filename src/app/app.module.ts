@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { HackerNewsComponent } from './app.component';
+import { HackerNewsService } from './app.services';
 
 @NgModule({
   declarations: [
-    AppComponent
+    HackerNewsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HackerNewsService],
+  bootstrap: [HackerNewsComponent]  //component goc se la HackerNewsComponent
 })
 export class AppModule { }
