@@ -10,8 +10,6 @@ export class HackerNewsService {
 
   getNews() {
     return this.http.get(`https://hn.algolia.com/api/v1/search_by_date?query=nodejs&tags=story`)
-    .map(
-        (res:Response) => res.json()
-    );
+    .map((res:Response) => res.json());
   }
 }

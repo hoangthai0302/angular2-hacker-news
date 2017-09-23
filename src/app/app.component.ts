@@ -14,4 +14,8 @@ export class HackerNewsComponent {
 
     this.HackerNewsService.getNews().subscribe(data => this.news = data);
   }
+
+   getLatestNews() {
+      this.HackerNewsService.getNews().subscribe(data => this.news = data);
+    }
 }
