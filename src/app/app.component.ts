@@ -12,8 +12,6 @@ export class HackerNewsComponent {
   news = {};
   constructor(private HackerNewsService: HackerNewsService) {
 
-    this.HackerNewsService
-    .getNews()
-    .subscribe(data => this.news = data);
+    this.HackerNewsService.getNews().subscribe(data => this.news = data);
   }
 }
