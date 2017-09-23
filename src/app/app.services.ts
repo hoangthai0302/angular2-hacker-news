@@ -11,11 +11,7 @@ export class HackerNewsService {
   getNews() {
     return this.http.get(`https://hn.algolia.com/api/v1/search_by_date?query=nodejs&tags=story`)
     .map(
-        function(res:Response){
-            console.log(res.json());
-            return res.json()
-        }
-       
+        (res:Response) => res.json()
     );
   }
 }
